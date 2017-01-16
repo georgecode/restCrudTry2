@@ -1,7 +1,10 @@
 class User < ActiveRecord::Base
   # Remember to create a migration!
-  # has_many :Subscriptions
-  # has_many :channels
+   has_many :subscriptions
+   has_many :channels, through: :subscriptions
+
+   validates :email, :hashed_password, presence: true
+   validates :email, uniqueness: true
 
   def password
     @password ||= BCrypt::Password.new(hashed_password)
