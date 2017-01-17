@@ -6,7 +6,7 @@
 <h1>Channels Avail:</h1>
 <% @channels.each do |channel|%>
   <!-- <p><%= channel.name %>  : $<%= channel.price_per_month %></p> -->
-  <p><%= "#{channel.name} : #{channel.price_per_month}" %> </p>
+  <p><a href="/channels/<%= channel.id%>"><%= "#{channel.name} : #{channel.price_per_month}" %></a> </p>
 <%end%>
 <!-- channel.price_per_month -->
 <!-- price_per_month -->

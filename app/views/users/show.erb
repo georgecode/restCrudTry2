@@ -5,7 +5,8 @@
 
   <% @user.channels.each do |channel|%>
     <p> <%= channel.name %></p>
-    <p><%=channel.price_per_month%></p>
+    <p> <%= channel.id%> </p>
+   <!--  <p><%#=channel.price_per_month%></p> -->
   <%end%>
 
   <h2>Total:</h2>
