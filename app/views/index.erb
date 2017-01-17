@@ -1,3 +1,25 @@
+
+<a href="/sessions/new">Sign In</a>
+
+<a href="/users/new">Sign up</a>
+
+<h1>Channels Avail:</h1>
+<% @channels.each do |channel|%>
+  <!-- <p><%= channel.name %>  : $<%= channel.price_per_month %></p> -->
+  <p><%= "#{channel.name} : #{channel.price_per_month}" %> </p>
+<%end%>
+<!-- channel.price_per_month -->
+<!-- price_per_month -->
+
+<p>x</p>
+<p>x</p>
+<p>x</p>
+<p>x</p>
+<p>x</p>
+<p></p>
+<p></p>
+
+
 <div class="container">
   <h1>Welcome to Sinatra!</h1>
   <p>Hello, world!</p>
