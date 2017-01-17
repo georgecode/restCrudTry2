@@ -1,0 +1,22 @@
+Hellllllllllooooooo
+<h1><%= @channel.name %></h1>
+<p>Call Sign: <%= @channel.callsign%></p>
+<p>Price:<%=@channel.price_per_month %> </p>
+<p>Number of subscribers: <%= @subscribers_count %> </p>
+<!-- if shits fucked make sure you have the method in helper -->
+<% if subscribed %>
+   <form action="/subscriptions/<%= @channel.id %>" method="POST">
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="submit" value="Delete Unsubscribe">
+   </form>
+
+  <% else %>
+   <form action="/subscriptions/<%= @channel.id %>" method="POST">
+      <input type="submit" value="Subscribe">
+  </form>
+
+<%end%>
+
+<%#= channel.fuckers.count %>
+
+<!-- channel.fuckers.length -->
